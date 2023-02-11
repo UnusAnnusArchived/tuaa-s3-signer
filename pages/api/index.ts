@@ -22,9 +22,8 @@ const getpath: NextApiHandler = async (req, res) => {
 
     res.redirect(signedUrl);
   } catch (err) {
-    // res.status(500);
-    res.send("error");
-    // res.end();
+    res.status(500);
+    res.send(err);
   }
 };
 
